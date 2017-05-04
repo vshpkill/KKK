@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.youlehuo.app">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.android.alarm.permission.SET_ALARM" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+    <application
+        android:name=".DemoApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AppCompat.NoActionBar">
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".four_zujian.getapk.GetApkActivity" />
+        <activity android:name=".aboutview.scrollview.SecondActivity" />
+        <activity android:name=".four_zujian.handlermessage.MessageActivity" />
+        <activity android:name=".four_zujian.deeplinks.DeepLinksActivity" />
+        <activity android:name=".aboutview.myselfview.CarActivity" />
+        <activity android:name=".aboutview.notification.NotificationActivity" />
+        <activity android:name=".four_zujian.intentaction.IntentActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.SEND" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <data android:mimeType="text/plain" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".four_zujian.intentaction.OpenIntentActivity" />
+        <activity android:name=".aboutview.gaosimohu.VagueActivity" />
+        <activity android:name=".four_zujian.service.ServiceActivity"/>
+        <activity android:name=".aboutview.recycleview.RecycleActivity"/>
+        <activity android:name=".aboutview.recycleview.citylist.CityActivity"/>
+        <activity android:name=".aboutview.paint_canvas.CanvasActivity"/>
+        <activity android:name=".aboutview.recycleview.skidview.SkidActivity"/>
+        <activity android:name=".four_zujian.permission.PermissionActivity"/>
+        <activity android:name=".aboutview.paint_canvas.PathActivity"/>
+        <activity android:name=".aboutview.muiscradio.MusicActivity"/>
+        <activity android:name=".four_zujian.camera.CameraActivity"/>
+        <activity android:name=".aboutview.viewpager.ViewPagerActivity"/>
+        <activity android:name=".aboutview.pobupwindow.PobActivity"/>
+
+        <service android:name=".four_zujian.service.MyService"/>
+        <service android:name=".four_zujian.service.MessengerService"/>
+    </application>
+
+
+</manifest>
