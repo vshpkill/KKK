@@ -49,9 +49,18 @@
         <activity android:name=".four_zujian.camera.CameraActivity"/>
         <activity android:name=".aboutview.viewpager.ViewPagerActivity"/>
         <activity android:name=".aboutview.pobupwindow.PobActivity"/>
+        <activity android:name=".four_zujian.downloadmanager.DownLoadActivity" />
 
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>
+
+        <receiver android:name=".four_zujian.downloadmanager.DownloadManagerReceiver">
+            <intent-filter>
+                <!-- 配置 点击通知 和 下载完成 两个 action -->
+                <action android:name="android.intent.action.DOWNLOAD_NOTIFICATION_CLICKED"/>
+                <action android:name="android.intent.action.DOWNLOAD_COMPLETE"/>
+            </intent-filter>
+        </receiver>
     </application>
 
 

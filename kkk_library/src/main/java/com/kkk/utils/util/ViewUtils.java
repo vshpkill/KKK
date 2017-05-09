@@ -8,16 +8,12 @@ import android.os.Build;
 import android.text.Editable;
 import android.text.Selection;
 import android.text.Spannable;
-import android.view.ViewTreeObserver;
-import android.widget.EditText;
-import java.lang.reflect.Field;
-import java.util.ArrayList;
-import java.util.List;
-
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
+import android.view.ViewTreeObserver;
 import android.widget.AbsListView;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.LinearLayout;
 import android.widget.ListAdapter;
@@ -25,6 +21,10 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.RelativeLayout.LayoutParams;
 import android.widget.TextView;
+
+import java.lang.reflect.Field;
+import java.util.ArrayList;
+import java.util.List;
 /**
  * 视图工具箱
  */

@@ -3,7 +3,8 @@ package com.kkk.utils.util;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import com.github.lazylibrary.constant.DbConstants;
+
+import com.kkk.utils.constant.DbConstants;
 
 /**
  * db helper

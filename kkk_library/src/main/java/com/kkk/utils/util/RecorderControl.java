@@ -1,12 +1,12 @@
 package com.kkk.utils.util;
 
-import java.io.IOException;
-
 import android.media.MediaPlayer;
 import android.media.MediaPlayer.OnCompletionListener;
 import android.media.MediaRecorder;
 import android.os.Environment;
 import android.util.Log;
+
+import java.io.IOException;
 
 /**
  * 录音
