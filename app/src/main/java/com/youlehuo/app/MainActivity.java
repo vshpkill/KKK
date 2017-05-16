@@ -10,6 +10,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.youlehuo.app.aboutview.gaosimohu.VagueActivity;
+import com.youlehuo.app.aboutview.image.slice.SliceActivity;
 import com.youlehuo.app.aboutview.myselfview.CarActivity;
 import com.youlehuo.app.aboutview.notification.NotificationActivity;
 import com.youlehuo.app.aboutview.paint_canvas.CanvasActivity;
@@ -74,6 +75,7 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("相机调用",CameraActivity.class));
         list.add(initBean("viewpager",ViewPagerActivity.class));
         list.add(initBean("tip提示",PobActivity.class));
+        list.add(initBean("切片view",SliceActivity.class));
 
         lv_main.setAdapter(adapter);
     }

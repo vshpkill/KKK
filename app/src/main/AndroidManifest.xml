@@ -50,6 +50,7 @@
         <activity android:name=".aboutview.viewpager.ViewPagerActivity"/>
         <activity android:name=".aboutview.pobupwindow.PobActivity"/>
         <activity android:name=".four_zujian.downloadmanager.DownLoadActivity" />
+        <activity android:name=".aboutview.image.slice.SliceActivity"/>
 
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>

@@ -32,4 +32,5 @@ dependencies {
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     compile 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:1.6.36'
+    compile 'com.android.support:support-v4:24+'
 }

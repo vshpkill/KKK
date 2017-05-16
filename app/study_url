@@ -1,0 +1,33 @@
+清华大学开源软件镜像站
+https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/
+
+全志Android SDK编译指导
+1. repo init -u git@github.yoloho.com:androidv4-root/manifest.git --repo-url=https://mirrors.tuna.tsinghua.edu.cn/git/git-repo/ --repo-branch=master -b master -m default-qz.xml
+
+参考：https://mirrors.tuna.tsinghua.edu.cn/help/AOSP/
+
+2. repo sync
+
+3. repo start master --all
+
+注：android/external/libbq 切换只serial分支
+
+4. 编译方式参考附件：Vortex-C3编译说明.pdf
+
+5. 确保安装mkimage命令，ubuntu下安装指令为apt install u-boot-tools
+
+具体编译方法：
+
+lichee编译：
+cd lichee
+./build.sh config
+./build.sh
+
+android编译：
+cd android
+source build/envsetup.sh
+lunch
+extract-bsp
+make installclean // 如有需要
+make -j2
+pack

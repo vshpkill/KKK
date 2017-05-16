@@ -8,5 +8,7 @@
     <attr name="cornerRadius" format="float" />
     <attr name="halfBaseOfLeg" format="dimension" />
 	</declare-styleable>
-	 	  
+    <declare-styleable name="my_relative">
+        <attr name="num" format="integer"/>
+    </declare-styleable>
 </resources>
