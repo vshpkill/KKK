@@ -9,9 +9,14 @@ import com.sensorsdata.analytics.android.sdk.SensorsDataAPI;
  */
 
 public class DemoApplication extends Application {
+    private static DemoApplication application;
+    public static DemoApplication getApplication(){
+        return application;
+    }
     @Override
     public void onCreate() {
         super.onCreate();
+        application = this;
 //        initSC();
     }
     // 数据接收的 URL

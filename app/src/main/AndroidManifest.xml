@@ -51,6 +51,10 @@
         <activity android:name=".aboutview.pobupwindow.PobActivity"/>
         <activity android:name=".four_zujian.downloadmanager.DownLoadActivity" />
         <activity android:name=".aboutview.image.slice.SliceActivity"/>
+        <activity android:name=".libgdx.study.HelloGameActivity"/>
+        <activity android:name=".libgdx.spinedemo.SpineActivity"/>
+        <activity android:name=".lottie.LottieActivity"/>
+        <activity android:name=".lottie.ClickActivity"/>
 
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>

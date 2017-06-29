@@ -27,6 +27,9 @@ import com.youlehuo.app.four_zujian.handlermessage.MessageActivity;
 import com.youlehuo.app.four_zujian.intentaction.OpenIntentActivity;
 import com.youlehuo.app.four_zujian.permission.PermissionActivity;
 import com.youlehuo.app.four_zujian.service.ServiceActivity;
+import com.youlehuo.app.libgdx.spinedemo.SpineActivity;
+import com.youlehuo.app.libgdx.study.HelloGameActivity;
+import com.youlehuo.app.lottie.LottieActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -76,7 +79,9 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("viewpager",ViewPagerActivity.class));
         list.add(initBean("tip提示",PobActivity.class));
         list.add(initBean("切片view",SliceActivity.class));
-
+        list.add(initBean("游戏引擎",HelloGameActivity.class));
+        list.add(initBean("游戏测试",SpineActivity.class));
+        list.add(initBean("lottie动画测试",LottieActivity.class));
         lv_main.setAdapter(adapter);
     }
 
