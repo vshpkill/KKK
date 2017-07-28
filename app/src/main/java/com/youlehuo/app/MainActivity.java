@@ -82,6 +82,7 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("游戏引擎",HelloGameActivity.class));
         list.add(initBean("游戏测试",SpineActivity.class));
         list.add(initBean("lottie动画测试",LottieActivity.class));
+        list.add(initBean("文件处理",UtilsActivity.class));
         lv_main.setAdapter(adapter);
     }
 

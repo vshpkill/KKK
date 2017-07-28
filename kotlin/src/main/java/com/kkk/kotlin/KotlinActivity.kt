@@ -18,7 +18,7 @@ class KotlinActivity : Activity() {
 
     }
 
-    fun showToast(context : String,type : Int = Toast.LENGTH_SHORT){
-        Toast.makeText(this,context,type).show()
+    fun showToast(content : String,type : Int = Toast.LENGTH_SHORT){
+        Toast.makeText(this,content,type).show()
     }
 }
