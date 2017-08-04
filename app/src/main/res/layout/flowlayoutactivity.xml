@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="85dp"
+        android:text="你是谁！"/>
+    <com.youlehuo.app.aboutview.flowlayout.MyFlowView
+        android:padding="10dp"
+        android:id="@+id/id_flowlayout"
+        android:layout_width="fill_parent"
+        android:background="#E5E5F5"
+        android:layout_height="wrap_content" >
+
+    </com.youlehuo.app.aboutview.flowlayout.MyFlowView>
+</LinearLayout>

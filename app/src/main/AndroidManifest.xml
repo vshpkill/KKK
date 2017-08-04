@@ -56,6 +56,9 @@
         <activity android:name=".lottie.LottieActivity"/>
         <activity android:name=".lottie.ClickActivity"/>
         <activity android:name=".UtilsActivity"/>
+        <activity android:name=".aboutview.flowlayout.FlowLayoutActivity"/>
+        <activity android:name=".aboutview.tablayout.TabLayoutActivity"/>
+        <activity android:name=".aboutview.taobaogoods.TaoBaoActivity"/>
 
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>

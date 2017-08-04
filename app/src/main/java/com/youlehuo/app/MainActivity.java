@@ -8,7 +8,8 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-
+import com.youlehuo.app.aboutview.animation.AnimationActivity;
+import com.youlehuo.app.aboutview.flowlayout.FlowLayoutActivity;
 import com.youlehuo.app.aboutview.gaosimohu.VagueActivity;
 import com.youlehuo.app.aboutview.image.slice.SliceActivity;
 import com.youlehuo.app.aboutview.myselfview.CarActivity;
@@ -19,6 +20,8 @@ import com.youlehuo.app.aboutview.pobupwindow.PobActivity;
 import com.youlehuo.app.aboutview.recycleview.citylist.CityActivity;
 import com.youlehuo.app.aboutview.recycleview.skidview.SkidActivity;
 import com.youlehuo.app.aboutview.scrollview.SecondActivity;
+import com.youlehuo.app.aboutview.tablayout.TabLayoutActivity;
+import com.youlehuo.app.aboutview.taobaogoods.TaoBaoActivity;
 import com.youlehuo.app.aboutview.viewpager.ViewPagerActivity;
 import com.youlehuo.app.four_zujian.camera.CameraActivity;
 import com.youlehuo.app.four_zujian.deeplinks.DeepLinksActivity;
@@ -30,11 +33,10 @@ import com.youlehuo.app.four_zujian.service.ServiceActivity;
 import com.youlehuo.app.libgdx.spinedemo.SpineActivity;
 import com.youlehuo.app.libgdx.study.HelloGameActivity;
 import com.youlehuo.app.lottie.LottieActivity;
-
 import java.util.ArrayList;
 import java.util.List;
-
 import butterknife.BindView;
+
 
 public class MainActivity extends BaseActivity{
     @BindView(R.id.lv_main)
@@ -83,6 +85,11 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("游戏测试",SpineActivity.class));
         list.add(initBean("lottie动画测试",LottieActivity.class));
         list.add(initBean("文件处理",UtilsActivity.class));
+        list.add(initBean("动画处理",AnimationActivity.class));
+        list.add(initBean("标签",FlowLayoutActivity.class));
+        list.add(initBean("tab卡片",TabLayoutActivity.class));
+        list.add(initBean("商品详情",TaoBaoActivity.class));
+
         lv_main.setAdapter(adapter);
     }
 
