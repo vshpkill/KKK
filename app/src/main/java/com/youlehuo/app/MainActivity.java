@@ -63,7 +63,7 @@ public class MainActivity extends BaseActivity{
 
     @Override
     protected void initVariables() {
-        list.add(initBean("滑动冲突解决", SecondActivity.class));
+        list.add(initBean("滑动冲突解决", SecondActivity.class) );
         list.add(initBean("获取应用安装信息", GetApkActivity.class));
         list.add(initBean("DeepLinks", DeepLinksActivity.class));
         list.add(initBean("子线程使用Handler", MessageActivity.class));
