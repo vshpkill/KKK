@@ -8,6 +8,7 @@ import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+
 import com.youlehuo.app.aboutview.animation.AnimationActivity;
 import com.youlehuo.app.aboutview.flowlayout.FlowLayoutActivity;
 import com.youlehuo.app.aboutview.gaosimohu.VagueActivity;
@@ -23,6 +24,7 @@ import com.youlehuo.app.aboutview.scrollview.SecondActivity;
 import com.youlehuo.app.aboutview.tablayout.TabLayoutActivity;
 import com.youlehuo.app.aboutview.taobaogoods.TaoBaoActivity;
 import com.youlehuo.app.aboutview.viewpager.ViewPagerActivity;
+import com.youlehuo.app.demoforandroid.userui.DragViewActivity;
 import com.youlehuo.app.four_zujian.camera.CameraActivity;
 import com.youlehuo.app.four_zujian.deeplinks.DeepLinksActivity;
 import com.youlehuo.app.four_zujian.getapk.GetApkActivity;
@@ -33,8 +35,10 @@ import com.youlehuo.app.four_zujian.service.ServiceActivity;
 import com.youlehuo.app.libgdx.spinedemo.SpineActivity;
 import com.youlehuo.app.libgdx.study.HelloGameActivity;
 import com.youlehuo.app.lottie.LottieActivity;
+
 import java.util.ArrayList;
 import java.util.List;
+
 import butterknife.BindView;
 
 
@@ -89,6 +93,7 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("标签",FlowLayoutActivity.class));
         list.add(initBean("tab卡片",TabLayoutActivity.class));
         list.add(initBean("商品详情",TaoBaoActivity.class));
+        list.add(initBean("创建拖放视图",DragViewActivity.class));
 
         lv_main.setAdapter(adapter);
     }
