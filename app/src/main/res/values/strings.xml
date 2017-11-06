@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">App</string>
+    <string name="app_name">功能整理</string>
     <string name="permission_camera_rationale">App</string>
     <string name="button_allow">App</string>
     <string name="button_deny">App</string>

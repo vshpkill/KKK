@@ -4,42 +4,52 @@
     android:layout_height="match_parent"
     android:background="@color/white"
     android:divider="@drawable/divider"
-    android:dividerPadding="50dp"
+    android:dividerPadding="10dp"
     android:orientation="vertical"
     android:showDividers="middle">
 
     <TextView
+        android:id="@+id/tv_normal"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="发几开设的积分" />
+        android:onClick="normalClick"
+        android:text="普通通知" />
 
     <TextView
+        android:id="@+id/tv_bigtv"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="发几开设的积分" />
+        android:onClick="bigTVClick"
+        android:text="BigTextView" />
 
     <TextView
+        android:id="@+id/tv_bigimg"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="发几开设的积分" />
+        android:onClick="bigIVClick"
+        android:text="BigImageView" />
 
     <TextView
+        android:id="@+id/tv_box"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="发几开设的积分" />
+        android:onClick="inBoxClick"
+        android:text="INBox" />
 
     <TextView
+        android:id="@+id/tv_mine"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:background="@color/colorPrimary"
         android:gravity="center"
-        android:text="发几开设的积分" />
+        android:onClick="mainClick"
+        android:text="自定义通知布局" />
 </LinearLayout>

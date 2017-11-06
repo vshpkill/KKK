@@ -36,10 +36,11 @@ dependencies {
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     compile 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:1.6.36'
-    compile 'com.android.support:support-v4:24+'
+    compile 'com.android.support:support-v4:23+'
     compile 'com.esotericsoftware.spine:spine-libgdx:3.5.51.1'
     compile 'com.badlogicgames.gdx:gdx:1.6.1'
     compile 'com.badlogicgames.gdx:gdx-box2d:1.6.1'
     compile 'com.badlogicgames.gdx:gdx-controllers-android:1.9.6'
     compile 'com.airbnb.android:lottie:2.0.0'
+    compile 'com.github.bumptech.glide:glide:3.7.0'
 }

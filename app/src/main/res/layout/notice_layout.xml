@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/im_app"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:src="@drawable/official" />
+
+    <TextView
+        android:id="@+id/tv_app"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_title"
+        android:layout_toEndOf="@+id/im_app"
+        android:layout_toRightOf="@+id/im_app"
+        android:text="呵呵哒" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/im_app"
+        android:layout_toLeftOf="@+id/im_notice"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="这是一个标题" />
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_title"
+        android:layout_toLeftOf="@+id/im_notice"
+        android:ellipsize="end"
+        android:maxLines="2"
+        android:text="这是内容" />
+
+    <ImageView
+        android:id="@+id/im_notice"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:src="@drawable/head" />
+</RelativeLayout>

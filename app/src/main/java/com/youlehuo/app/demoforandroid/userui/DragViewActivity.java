@@ -1,5 +1,6 @@
 package com.youlehuo.app.demoforandroid.userui;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -23,6 +24,8 @@ public class DragViewActivity extends BaseActivity implements View.OnLongClickLi
         findViewById(R.id.image1).setOnLongClickListener(this);
         findViewById(R.id.image2).setOnLongClickListener(this);
         findViewById(R.id.image3).setOnLongClickListener(this);
+
+        Intent intent = new Intent();
     }
 
     @Override
