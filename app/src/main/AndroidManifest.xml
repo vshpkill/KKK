@@ -60,6 +60,8 @@
         <activity android:name=".aboutview.tablayout.TabLayoutActivity"/>
         <activity android:name=".aboutview.taobaogoods.TaoBaoActivity"/>
         <activity android:name=".demoforandroid.userui.DragViewActivity"/>
+        <activity android:name=".aboutview.littlefunction.LittleFActivity"/>
+        <activity android:name=".aboutview.bottomtabview.BTabViewActivity"/>
 
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>

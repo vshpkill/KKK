@@ -10,9 +10,11 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.youlehuo.app.aboutview.animation.AnimationActivity;
+import com.youlehuo.app.aboutview.bottomtabview.BTabViewActivity;
 import com.youlehuo.app.aboutview.flowlayout.FlowLayoutActivity;
 import com.youlehuo.app.aboutview.gaosimohu.VagueActivity;
 import com.youlehuo.app.aboutview.image.slice.SliceActivity;
+import com.youlehuo.app.aboutview.littlefunction.LittleFActivity;
 import com.youlehuo.app.aboutview.myselfview.CarActivity;
 import com.youlehuo.app.aboutview.notification.NotificationActivity;
 import com.youlehuo.app.aboutview.paint_canvas.CanvasActivity;
@@ -94,7 +96,8 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("tab卡片",TabLayoutActivity.class));
         list.add(initBean("商品详情",TaoBaoActivity.class));
         list.add(initBean("创建拖放视图",DragViewActivity.class));
-
+        list.add(initBean("小功能整理",LittleFActivity.class));
+        list.add(initBean("底部导航View",BTabViewActivity.class));
         lv_main.setAdapter(adapter);
     }
 
