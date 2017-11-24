@@ -19,14 +19,17 @@ public class FragmentTabFive extends Fragment {
     public void onAttach(Context context) {
         super.onAttach(context);
     }
+
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("Fragment执行状态","FragmentTabFive--onCreate");
     }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        Log.e("Fragment执行状态","FragmentTabFive");
+        Log.e("Fragment执行状态", "FragmentTabFive");
         FrameLayout frameLayout = new FrameLayout(getContext());
         frameLayout.setBackgroundColor(0xFFf967e2);
         return frameLayout;
@@ -34,6 +37,14 @@ public class FragmentTabFive extends Fragment {
 
     @Override
     public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser) {
+            loadData();
+        }
         super.setUserVisibleHint(isVisibleToUser);
     }
+
+    private void loadData() {
+        Log.e("Fragment执行状态","FragmentTabFive--loadData");
+    }
+
 }

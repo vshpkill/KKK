@@ -9,15 +9,12 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.youlehuo.app.R;
 
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -57,12 +54,14 @@ public class BottomTabView extends LinearLayout {
 
     }
 
-    public void setBottomTabData(List<View> tabList) {
+    List<String> tabList;
+
+    public void setBottomTabData(List<String> tabList) {
         if (tabList == null || tabList.size() == 0)
             return;
-        for (int i = 0; i < tabList.size(); i++) {
-            tabLayout.addTab(tabLayout.newTab().setText(((TextView) tabList.get(i)).getText()));
-        }
+        this.tabList = tabList;
+//            tabLayout.addTab(tabLayout.newTab().setText(((TextView) tabList.get(i)).getText()), i);
+        initEvents();
     }
 
     public void setTabMode(boolean isFixed) {
@@ -74,7 +73,6 @@ public class BottomTabView extends LinearLayout {
     }
 
     List<String> fragments;
-    Map<String, Fragment> fragmentList = new HashMap<>();
 
     public void setViewPager(List<String> fragments, FragmentManager manager) {
         ViewPageAdapter viewPageAdapter = new ViewPageAdapter(manager);
@@ -91,19 +89,54 @@ public class BottomTabView extends LinearLayout {
 
         @Override
         public android.support.v4.app.Fragment getItem(int position) {
-            if (fragmentList.containsKey(fragments.get(position))) {
-                return fragmentList.get(fragments.get(position));
-            } else {
-                Fragment fragment = Fragment.instantiate(context, fragments.get(position));
-                fragmentList.put(fragments.get(position), fragment);
-                return fragment;
-            }
+            return Fragment.instantiate(context, fragments.get(position));
+//            return fragments.get(position);
         }
 
         @Override
         public int getCount() {
             return fragments == null ? 0 : fragments.size();
         }
+
+        @Override
+        public CharSequence getPageTitle(int position) {
+            return tabList.get(position);
+        }
+    }
+
+    public void setTabView() {
+        TextView textView = new TextView(context);
+        textView.setText("替换而已");
+        textView.setTextColor(0xFFfefe6e);
+        tabLayout.getTabAt(0).setCustomView(textView);
+    }
+
+    private void initEvents() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab == tabLayout.getTabAt(0)) {
+                } else if (tab == tabLayout.getTabAt(1)) {
+                } else if (tab == tabLayout.getTabAt(2)) {
+                } else if (tab == tabLayout.getTabAt(3)) {
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) {
+                if (tab == tabLayout.getTabAt(0)) {
+                } else if (tab == tabLayout.getTabAt(1)) {
+                } else if (tab == tabLayout.getTabAt(2)) {
+                } else if (tab == tabLayout.getTabAt(3)) {
+                }
+            }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) {
+
+            }
+        });
+
     }
 }
 

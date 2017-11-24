@@ -1,6 +1,5 @@
 package com.youlehuo.app.aboutview.bottomtabview;
 
-import android.view.View;
 import android.widget.TextView;
 
 import com.youlehuo.app.BaseActivity;
@@ -32,21 +31,35 @@ public class BTabViewActivity extends BaseActivity {
 
     @Override
     protected void initVariables() {
-        List<View> viewList = new ArrayList<>();
+        List<String> viewList = new ArrayList<>();
         for (int i = 0; i < 5; i++) {
             TextView textView = new TextView(context);
             textView.setText("tab" + i);
-            viewList.add(textView);
+            textView.setTextColor(0xFFfefe6e);
+            viewList.add("tab" + i);
         }
-        bottomTabView.setTabMode(true);
-        bottomTabView.setBottomTabData(viewList);
-
         List<String> fragments = new ArrayList<>();
+
+        FragmentTabOne tabOne = new FragmentTabOne();
+        FragmentTabTwo tabTwo = new FragmentTabTwo();
+        FragmentTabThree tabThree = new FragmentTabThree();
+        FragmentTabFour tabFour = new FragmentTabFour();
+        FragmentTabFive tabFive = new FragmentTabFive();
+
+
         fragments.add(FragmentTabOne.class.getName());
         fragments.add(FragmentTabTwo.class.getName());
         fragments.add(FragmentTabThree.class.getName());
         fragments.add(FragmentTabFour.class.getName());
         fragments.add(FragmentTabFive.class.getName());
+//        fragments.add(tabOne);
+//        fragments.add(tabTwo);
+//        fragments.add(tabThree);
+//        fragments.add(tabFour);
+//        fragments.add(tabFive);
+        bottomTabView.setBottomTabData(viewList);
         bottomTabView.setViewPager(fragments, getSupportFragmentManager());
+        bottomTabView.setTabMode(true);
+        bottomTabView.setTabView();
     }
 }

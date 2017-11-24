@@ -22,6 +22,7 @@ public class FragmentTabThree extends Fragment {
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        Log.e("Fragment执行状态","FragmentTabThree--onCreate");
     }
     @Nullable
     @Override
@@ -30,5 +31,16 @@ public class FragmentTabThree extends Fragment {
         FrameLayout frameLayout = new FrameLayout(getContext());
         frameLayout.setBackgroundColor(0xFFf5f67e);
         return frameLayout;
+    }
+    @Override
+    public void setUserVisibleHint(boolean isVisibleToUser) {
+        if (isVisibleToUser){
+            loadData();
+        }
+        super.setUserVisibleHint(isVisibleToUser);
+    }
+
+    private void loadData() {
+        Log.e("Fragment执行状态","FragmentTabThree--loadData");
     }
 }
