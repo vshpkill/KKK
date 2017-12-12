@@ -1,16 +1,23 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="MMaterialTheme" parent="MyMaterialTheme">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/pink5</item>
+        <item name="colorAccent">@color/yellow3</item>
     </style>
-
+    <style name="MyMaterialTheme" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="colorPrimary">@color/colorAccent</item>
+        <item name="colorPrimaryDark">@color/pink5</item>
+        <item name="colorAccent">@color/yellow3</item>
+    </style>
 
     <style name="AnimationPopup">
         <item name="android:windowEnterAnimation">@anim/scale_on</item>
         <item name="android:windowExitAnimation">@anim/scale_off</item>
     </style>
+
 </resources>

@@ -8,7 +8,6 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Queue;
 import java.util.Set;
 import java.util.SortedSet;
 import java.util.TreeSet;
@@ -33,6 +32,5 @@ public class CollectionDemo {
         List<String> list = Arrays.asList("1","2","3");
         list.add("4");
         SortedSet<String> sortedSet = new TreeSet<>();
-        Queue
     }
 }

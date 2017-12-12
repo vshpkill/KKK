@@ -11,7 +11,7 @@ android {
     }
     defaultConfig {
         applicationId "com.youlehuo.app"
-        minSdkVersion 14
+        minSdkVersion 17
         targetSdkVersion 24
         versionCode 1
         versionName "1.0"

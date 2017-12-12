@@ -2,7 +2,9 @@ package com.youlehuo.app.aboutview.notification;
 
 import android.app.Notification;
 import android.app.NotificationManager;
+import android.app.PendingIntent;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -17,6 +19,7 @@ import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
 import com.youlehuo.app.BaseActivity;
+import com.youlehuo.app.MainActivity;
 import com.youlehuo.app.R;
 
 import java.io.File;
@@ -48,13 +51,18 @@ public class NotificationActivity extends BaseActivity {
     }
 
     public void normalClick(View view) {
+        Intent intent = new Intent(context, MainActivity.class);
+        PendingIntent contentIntent = PendingIntent.getActivity(context, 11, intent, PendingIntent.FLAG_UPDATE_CURRENT);
+
         NotificationCompat.Builder builder = new NotificationCompat.Builder(this);
         Notification notification = builder
                 .setContentTitle("这是普通标题")
                 .setContentText("这是普通通知内容")
                 .setSubText("普通通知应用描述")
+                .setContentIntent(contentIntent)
                 .setWhen(System.currentTimeMillis())
                 .setSmallIcon(R.drawable.official)
+                .setAutoCancel(true)
                 .setDefaults(Notification.DEFAULT_ALL)
                 .setColor(0xFFFD671A)
                 .setLargeIcon(BitmapFactory.decodeResource(

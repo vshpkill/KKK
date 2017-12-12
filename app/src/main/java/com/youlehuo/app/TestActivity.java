@@ -24,5 +24,6 @@ public class TestActivity extends BaseActivity {
     protected void initVariables() {
         LinkedHashMap<String,String> linkedHashMap = new LinkedHashMap<String,String>(0,0.5f,true);
 
+
     }
 }
