@@ -25,6 +25,7 @@ import com.youlehuo.app.aboutview.recycleview.skidview.SkidActivity;
 import com.youlehuo.app.aboutview.scrollview.SecondActivity;
 import com.youlehuo.app.aboutview.tablayout.TabLayoutActivity;
 import com.youlehuo.app.aboutview.taobaogoods.TaoBaoActivity;
+import com.youlehuo.app.aboutview.viewdoubleuse.DoubleUseOneActivity;
 import com.youlehuo.app.aboutview.viewpager.ViewPagerActivity;
 import com.youlehuo.app.demoforandroid.userui.DragViewActivity;
 import com.youlehuo.app.four_zujian.camera.CameraActivity;
@@ -98,6 +99,7 @@ public class MainActivity extends BaseActivity{
         list.add(initBean("创建拖放视图",DragViewActivity.class));
         list.add(initBean("小功能整理",LittleFActivity.class));
         list.add(initBean("底部导航View",BTabViewActivity.class));
+        list.add(initBean("控件不同Activity使用测试",DoubleUseOneActivity.class));
         lv_main.setAdapter(adapter);
     }
 
