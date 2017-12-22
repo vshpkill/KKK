@@ -64,9 +64,12 @@
         <activity android:name=".aboutview.bottomtabview.BTabViewActivity"/>
         <activity android:name=".aboutview.viewdoubleuse.DoubleUseOneActivity"/>
         <activity android:name=".aboutview.viewdoubleuse.DoubleUseTwoActivity"/>
-
+        <activity android:name=".videodemo.VideoListActivity"/>
         <service android:name=".four_zujian.service.MyService"/>
         <service android:name=".four_zujian.service.MessengerService"/>
+        <activity android:name=".zlibrary.LibraryActivity"/>
+        <activity android:name=".zlibrary.PublicActivity"/>
+        <activity android:name=".publicmanager.ipc.IPCActivity"/>
 
         <receiver android:name=".four_zujian.downloadmanager.DownloadManagerReceiver">
             <intent-filter>

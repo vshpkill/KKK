@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/video_thumbnail_placeholder_color"
+    android:orientation="vertical">
+
+    <com.volokh.danylo.video_player_manager.ui.VideoPlayerView
+        android:id="@+id/player"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/title" />
+
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/title"
+        android:background="@android:color/white" />
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/BaseText"
+        android:layout_alignParentBottom="true" />
+
+    <TextView
+        android:id="@+id/visibility_percents"
+        style="@style/BaseText"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true" />
+</RelativeLayout>

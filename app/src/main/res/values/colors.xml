@@ -101,5 +101,5 @@
     <color name="up_times_bg_red">#ffef805d</color>
     <color name="white_60_alpha">#99ffffff</color>
     <color name="white_80_alpha">#bbffffff</color>
-
+    <color name="video_thumbnail_placeholder_color">#cccccc</color>
 </resources>
