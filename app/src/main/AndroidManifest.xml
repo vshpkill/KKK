@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+
     package="com.youlehuo.app">
+    <!--android:sharedUserId="android.uid.system"-->
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -8,6 +10,7 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
     <uses-permission android:name="android.permission.CAMERA"/>
+    <!--<uses-permission android:name="android.permission.INJECT_EVENTS"/>-->
 
     <application
         android:name=".DemoApplication"
@@ -70,6 +73,8 @@
         <activity android:name=".zlibrary.LibraryActivity"/>
         <activity android:name=".zlibrary.PublicActivity"/>
         <activity android:name=".publicmanager.ipc.IPCActivity"/>
+
+        <service android:name=".four_zujian.service.ClickService"/>
 
         <receiver android:name=".four_zujian.downloadmanager.DownloadManagerReceiver">
             <intent-filter>

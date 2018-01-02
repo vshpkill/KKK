@@ -1,5 +1,6 @@
 package com.youlehuo.app.zlibrary;
 
+import android.content.Intent;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
@@ -34,11 +35,9 @@ public class PublicActivity extends BaseActivity {
         lv_main.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-//                Intent intent = new Intent();
-//                intent.setClass(PublicActivity.this, list.get(position).getClassName());
-//                startActivity(intent);
-                list.remove(position);
-                adapter.notifyDataSetChanged();
+                Intent intent = new Intent();
+                intent.setClass(PublicActivity.this, list.get(position).getClassName());
+                startActivity(intent);
             }
         });
     }
