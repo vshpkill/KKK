@@ -1,1 +1,1 @@
-include ':kkk_library', ':app', ':StackBlur'
+include ':kkk_library', ':app', ':StackBlur', ':idmquick'

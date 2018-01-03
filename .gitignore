@@ -9,3 +9,4 @@
 .externalNativeBuild
 /StackBlur/build
 将删除 .idea/vcs.xml
+.idea

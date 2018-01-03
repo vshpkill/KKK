@@ -1,13 +1,13 @@
 package com.youlehuo.app.publicmanager.ipc;
 
 import android.content.Intent;
-import android.content.pm.PackageManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
 import com.youlehuo.app.BaseActivity;
 import com.youlehuo.app.R;
+import com.youlehuo.app.four_zujian.service.ClickService;
 
 import java.io.DataOutputStream;
 import java.io.OutputStream;
@@ -40,17 +40,9 @@ public class IPCActivity extends BaseActivity {
         but_click2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /**包管理器*/
-                PackageManager packageManager = getPackageManager();
-                Intent intent = new Intent();
-                /**获得Intent*/
-                intent = packageManager.getLaunchIntentForPackage("com.client.xrxs.com.xrxsapp");  //com.xx.xx是我们获取到的包名
-                if (intent != null) {
-                    startActivity(intent);
-                }
 //                execShell(amd);
-//                Intent intent = new Intent(context, ClickService.class);
-//                startService(intent);
+                Intent intent = new Intent(context, ClickService.class);
+                startService(intent);
             }
         });
     }

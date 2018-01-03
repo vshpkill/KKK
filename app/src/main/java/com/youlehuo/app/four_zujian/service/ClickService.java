@@ -2,11 +2,14 @@ package com.youlehuo.app.four_zujian.service;
 
 import android.app.IntentService;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.os.SystemClock;
 import android.support.annotation.Nullable;
+import android.util.Log;
 
 import java.io.DataOutputStream;
 import java.io.OutputStream;
+import java.util.Date;
 
 /**
  * Created by xiaohe on 17-12-28.
@@ -16,7 +19,6 @@ public class ClickService extends IntentService {
     /**
      * Creates an IntentService.  Invoked by your subclass's constructor.
      *
-     * @param name Used to name the worker thread, important only for debugging.
      */
     public ClickService() {
         super("ClickService");
@@ -24,15 +26,35 @@ public class ClickService extends IntentService {
 
     @Override
     protected void onHandleIntent(@Nullable Intent intent) {
-        int i = 0;
-        SystemClock.sleep(10000);
-        while (i < 20) {
-//            execShell(amd);
-            execShell("sendevent /dev/input/event1 1 158 1");
-            execShell("sendevent /dev/input/event1 1 158 0");
-            SystemClock.sleep(5000);
-            i ++;
+        while (true) {
+            Date date = new Date();
+            int hour = date.getHours();
+            int minute = date.getMinutes();
+            Log.e("time","hour="+hour+",minute="+minute);
+            if (hour == 18&&minute>47) {
+                /**包管理器*/
+                PackageManager packageManager = getPackageManager();
+                /**获得Intent*/
+                intent = packageManager.getLaunchIntentForPackage("com.client.xrxs.com.xrxsapp");
+                if (intent != null) {
+                    startActivity(intent);
+                }
+                break;
+            } else {
+
+            }
+            SystemClock.sleep(20000);
         }
+
+//        int i = 0;
+//        SystemClock.sleep(10000);
+//        while (i < 20) {
+////            execShell(amd);
+//            execShell("sendevent /dev/input/event1 1 158 1");
+//            execShell("sendevent /dev/input/event1 1 158 0");
+//            SystemClock.sleep(5000);
+//            i ++;
+//        }
 //        int i = 0;
 //        SystemClock.sleep(10000);
 //        while (i<20){
