@@ -73,6 +73,8 @@
         <activity android:name=".zlibrary.LibraryActivity"/>
         <activity android:name=".zlibrary.PublicActivity"/>
         <activity android:name=".publicmanager.ipc.IPCActivity"/>
+        <activity android:name=".aboutview.wxfriends.FriendsActivity"/>
+        <activity android:name=".aboutview.pulltorefresh.SwipeRefreshActivity"/>
 
         <service android:name=".four_zujian.service.ClickService"/>
 

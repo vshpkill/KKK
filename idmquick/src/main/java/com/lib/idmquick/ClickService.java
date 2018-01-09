@@ -33,7 +33,7 @@ public class ClickService extends IntentService {
             int hour = date.getHours();
             int minute = date.getMinutes();
             Log.e("time", "hour=" + hour + ",minute=" + minute);
-            if (hour == setHour && minute > setMinute) {
+            if (hour == setHour && minute >= setMinute) {
                 /**包管理器*/
                 PackageManager packageManager = getPackageManager();
                 /**获得Intent*/
@@ -45,7 +45,7 @@ public class ClickService extends IntentService {
             } else {
 
             }
-            SystemClock.sleep(78637);
+            SystemClock.sleep(178637);
         }
     }
 }

@@ -35,5 +35,6 @@ public class MainActivity extends Activity {
         intent.putExtra(HOUR, hour);
         intent.putExtra(MINUTE, minute);
         startService(intent);
+        moveTaskToBack(true);
     }
 }

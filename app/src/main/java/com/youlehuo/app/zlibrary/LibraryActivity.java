@@ -19,6 +19,7 @@ import com.youlehuo.app.aboutview.notification.NotificationActivity;
 import com.youlehuo.app.aboutview.paint_canvas.CanvasActivity;
 import com.youlehuo.app.aboutview.paint_canvas.PathActivity;
 import com.youlehuo.app.aboutview.pobupwindow.PobActivity;
+import com.youlehuo.app.aboutview.pulltorefresh.SwipeRefreshActivity;
 import com.youlehuo.app.aboutview.recycleview.citylist.CityActivity;
 import com.youlehuo.app.aboutview.recycleview.skidview.SkidActivity;
 import com.youlehuo.app.aboutview.scrollview.SecondActivity;
@@ -26,6 +27,7 @@ import com.youlehuo.app.aboutview.tablayout.TabLayoutActivity;
 import com.youlehuo.app.aboutview.taobaogoods.TaoBaoActivity;
 import com.youlehuo.app.aboutview.viewdoubleuse.DoubleUseOneActivity;
 import com.youlehuo.app.aboutview.viewpager.ViewPagerActivity;
+import com.youlehuo.app.aboutview.wxfriends.FriendsActivity;
 import com.youlehuo.app.demoforandroid.userui.DragViewActivity;
 import com.youlehuo.app.four_zujian.camera.CameraActivity;
 import com.youlehuo.app.four_zujian.deeplinks.DeepLinksActivity;
@@ -102,6 +104,8 @@ public class LibraryActivity extends BaseActivity {
         list.add(initBean("底部导航View", BTabViewActivity.class));
         list.add(initBean("控件不同Activity使用测试", DoubleUseOneActivity.class));
         list.add(initBean("列表视频自动播放", VideoListActivity.class));
+        list.add(initBean("仿微信朋友圈回复", FriendsActivity.class));
+        list.add(initBean("下拉刷新上拉加载", SwipeRefreshActivity.class));
         lv_main.setAdapter(adapter);
     }
     private ClassBean initBean(String name, Class className) {
