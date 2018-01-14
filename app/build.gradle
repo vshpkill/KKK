@@ -26,6 +26,20 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+   /* signingConfigs {
+        release {
+            storeFile file("systemok.jks")
+            storePassword "he151608"
+            keyAlias "syskey"
+            keyPassword "he151608"
+        }
+    }
+    productFlavors {
+        //启动页加logo,并去掉百宝箱
+        "360" {
+            manifestPlaceholders = [UMENG_CHANNEL_VALUE: "360"]
+        }
+    }*/
 }
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
