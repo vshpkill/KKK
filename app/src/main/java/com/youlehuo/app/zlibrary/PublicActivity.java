@@ -46,6 +46,7 @@ public class PublicActivity extends BaseActivity {
     @Override
     protected void initVariables() {
         list.add(initBean("进程通信IPC", IPCActivity.class));
+        list.add(initBean("热修复", IPCActivity.class));
         lv_main.setAdapter(adapter);
     }
 

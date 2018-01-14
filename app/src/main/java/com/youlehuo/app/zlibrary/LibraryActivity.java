@@ -53,6 +53,7 @@ public class LibraryActivity extends BaseActivity {
     ListView lv_main;
     private ActivityAdapter adapter;
     private List<ClassBean> list = new ArrayList();
+
     @Override
     protected int setView() {
         return R.layout.activity_main;
