@@ -8,6 +8,8 @@ import android.widget.ListView;
 import com.youlehuo.app.BaseActivity;
 import com.youlehuo.app.R;
 import com.youlehuo.app.publicmanager.ipc.IPCActivity;
+import com.youlehuo.app.publicmanager.popwindow.PopWindowActivity;
+import com.youlehuo.app.publicmanager.refreshview.RefreshViewActivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -45,6 +47,10 @@ public class PublicActivity extends BaseActivity {
     @Override
     protected void initVariables() {
         list.add(initBean("进程通信IPC", IPCActivity.class));
+        list.add(initBean("ViewPager指示器", IPCActivity.class));
+        list.add(initBean("下拉显示", RefreshViewActivity.class));
+        list.add(initBean("popwindow显示", PopWindowActivity.class));
+
         lv_main.setAdapter(adapter);
     }
 

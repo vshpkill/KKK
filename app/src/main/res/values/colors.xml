@@ -104,4 +104,10 @@
     <color name="white_60_alpha">#99ffffff</color>
     <color name="white_80_alpha">#bbffffff</color>
     <color name="video_thumbnail_placeholder_color">#cccccc</color>
+
+
+    <color name="saffron">#F4B63E</color>
+    <color name="eggplant">#663D4E</color>
+    <color name="sienna">#EB6460</color>
+
 </resources>

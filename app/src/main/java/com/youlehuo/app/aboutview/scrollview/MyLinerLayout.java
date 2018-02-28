@@ -1,21 +1,25 @@
 package com.youlehuo.app.aboutview.scrollview;
 
 import android.content.Context;
+import android.support.v4.view.ViewCompat;
 import android.util.AttributeSet;
+import android.util.Log;
 import android.view.MotionEvent;
+import android.view.View;
 import android.widget.LinearLayout;
-import android.widget.ScrollView;
 
 /**
  * Created by dayima on 16-12-14.
  */
 
 public class MyLinerLayout extends LinearLayout {
-    private int yDown,yMove;
+    private boolean mRefreshing;
+    private int yDown, yMove;
     private int mMove;
-    private int i=0;
+    private int i = 0;
     private boolean isIntercept = false;
-    private ScrollView scrollView;
+    private View scrollView;
+
     public MyLinerLayout(Context context) {
         super(context);
     }
@@ -27,41 +31,63 @@ public class MyLinerLayout extends LinearLayout {
     public MyLinerLayout(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
     }
+
     @Override
     protected void onLayout(boolean changed, int l, int t, int r, int b) {
         super.onLayout(changed, l, t, r, b);
-        scrollView = (ScrollView) getChildAt(0);
+        scrollView = getChildAt(0);
     }
 
     @Override
     public boolean onInterceptTouchEvent(MotionEvent ev) {
         int y = (int) ev.getY();
-        int mScrollY = scrollView.getScrollY();
-        switch (ev.getAction()){
+        if (!isEnabled() || canChildScrollUp() || mRefreshing) {
+            isIntercept = false;
+        }
+        switch (ev.getAction()) {
             case MotionEvent.ACTION_DOWN:
                 yDown = y;
                 break;
             case MotionEvent.ACTION_MOVE:
                 yMove = y;
-                if (yMove - yDown>0&&mScrollY==0){
-                    if (!isIntercept){
+                Log.e("滑动距离", "yMove：" + yMove);
+                if (yMove - yDown > 0) {
+                    if (!isIntercept) {
                         yDown = (int) ev.getY();
+                        Log.e("滑动距离", "yDown：" + yDown);
                         isIntercept = true;
                     }
                 }
                 break;
             case MotionEvent.ACTION_UP:
-                layout(getLeft(),getTop()-i,getRight(),getBottom()-i);
+//                layout(getLeft(), getTop() - i, getRight(), getBottom() - i);
+                scrollTo(0,0);
                 i = 0;
                 isIntercept = false;
                 break;
         }
         if (isIntercept) {
-            mMove = yMove - yDown;
-            i += mMove;
-            layout(getLeft(), getTop() + mMove, getRight(), getBottom() + mMove);
+            mMove = (yMove - yDown)/3;
+            Log.e("滑动距离", "mMove：" + mMove);
+            if (i<=500){
+                i += mMove;
+//                layout(getLeft(), getTop() + mMove, getRight(), getBottom() + mMove);
+                scrollTo(0,-i);
+            }
         }
         return isIntercept;
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        switch (event.getAction()) {
+
+        }
+        return super.onTouchEvent(event);
+    }
+
+    private boolean canChildScrollUp() {
+        return ViewCompat.canScrollVertically(scrollView, -1);
     }
 
     @Override

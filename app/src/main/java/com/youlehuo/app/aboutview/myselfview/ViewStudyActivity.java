@@ -1,18 +1,16 @@
-package com.youlehuo.app.aboutview.scrollview;
-
+package com.youlehuo.app.aboutview.myselfview;
 
 import com.youlehuo.app.BaseActivity;
 import com.youlehuo.app.R;
 
 /**
- * Created by dayima on 16-12-26.
+ * Created by xiaohe on 18-1-29.
  */
 
-public class SecondActivity extends BaseActivity {
-
+public class ViewStudyActivity extends BaseActivity {
     @Override
     protected int setView() {
-        return R.layout.secondactivity;
+        return R.layout.viewstudyactivity;
     }
 
     @Override

@@ -31,4 +31,9 @@
         <item name="android:shadowRadius">2</item>
         <item name="android:gravity">center</item>
     </style>
+    <style name="showPopupAnimation">
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="@android:windowEnterAnimation">@anim/hot_pop_top_in</item>
+        <item name="@android:windowExitAnimation">@anim/hot_pop_top_out</item>
+    </style>
 </resources>

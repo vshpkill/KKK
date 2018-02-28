@@ -75,6 +75,8 @@
         <activity android:name=".publicmanager.ipc.IPCActivity"/>
         <activity android:name=".aboutview.wxfriends.FriendsActivity"/>
         <activity android:name=".aboutview.pulltorefresh.SwipeRefreshActivity"/>
+        <activity android:name=".publicmanager.refreshview.RefreshViewActivity"/>
+        <activity android:name=".publicmanager.popwindow.PopWindowActivity"/>
 
         <service android:name=".four_zujian.service.ClickService"/>
 
