@@ -47,10 +47,14 @@ public class PublicActivity extends BaseActivity {
     @Override
     protected void initVariables() {
         list.add(initBean("进程通信IPC", IPCActivity.class));
+<<<<<<< HEAD
         list.add(initBean("ViewPager指示器", IPCActivity.class));
         list.add(initBean("下拉显示", RefreshViewActivity.class));
         list.add(initBean("popwindow显示", PopWindowActivity.class));
 
+=======
+        list.add(initBean("热修复", IPCActivity.class));
+>>>>>>> 840cd70ef9fc363027ee4bf54ee0f602c0f20b85
         lv_main.setAdapter(adapter);
     }
 

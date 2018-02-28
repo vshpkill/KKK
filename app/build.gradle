@@ -1,5 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
+apply plugin: 'com.tencent.tinker.patch'
 android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
@@ -50,6 +51,7 @@ dependencies {
     compile 'com.github.hotchemi:permissionsdispatcher:2.3.1'
     apt 'com.github.hotchemi:permissionsdispatcher-processor:2.3.1'
     compile 'com.sensorsdata.analytics.android:SensorsAnalyticsSDK:1.6.36'
+
     compile 'com.android.support:support-v4:23+'
     compile 'com.esotericsoftware.spine:spine-libgdx:3.5.51.1'
     compile 'com.badlogicgames.gdx:gdx:1.6.1'
@@ -62,4 +64,6 @@ dependencies {
     compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    provided('com.tencent.tinker:tinker-android-anno:1.9.1')
+    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
 }
