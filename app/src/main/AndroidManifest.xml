@@ -77,6 +77,8 @@
         <activity android:name=".aboutview.pulltorefresh.SwipeRefreshActivity"/>
         <activity android:name=".publicmanager.refreshview.RefreshViewActivity"/>
         <activity android:name=".publicmanager.popwindow.PopWindowActivity"/>
+        <activity android:name=".publicmanager.WebViewAcivity"/>
+        <activity android:name=".publicmanager.newfirst.NewsDetailDetailActivity"/>
 
         <service android:name=".four_zujian.service.ClickService"/>
 
