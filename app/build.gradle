@@ -1,6 +1,5 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.neenbedankt.android-apt'
-apply plugin: 'com.tencent.tinker.patch'
 android {
     compileSdkVersion 24
     buildToolsVersion '25.0.0'
@@ -64,6 +63,4 @@ dependencies {
     compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
-    provided('com.tencent.tinker:tinker-android-anno:1.9.1')
-    compile('com.tencent.tinker:tinker-android-lib:1.9.1')
 }
