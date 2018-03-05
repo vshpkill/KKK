@@ -63,4 +63,8 @@ dependencies {
     compile 'com.github.danylovolokh:list-visibility-utils:0.2.0'
     compile 'com.squareup.picasso:picasso:2.5.2'
     compile 'com.scwang.smartrefresh:SmartRefreshLayout:1.0.5.1'
+    compile 'com.bartoszlipinski:recyclerviewheader2:2.0.1'
+
+    compile 'com.yyl.multiview:recyclerview-multiheaderview:1.0.5'
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.9.18'
 }

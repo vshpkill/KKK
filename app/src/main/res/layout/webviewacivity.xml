@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <com.youlehuo.app.publicmanager.newfirst.PowerfulRecyclerView
+        android:id="@+id/rl_web"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+    <!--<com.yyl.multiview.RecyclerViewMultiHeader
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:viewState="web">
+
+        <FrameLayout
+            android:id="@+id/fragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#cc747eac">
+
+            <WebView
+                android:id="@+id/web_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"></WebView>
+        </FrameLayout>
+
+    </com.yyl.multiview.RecyclerViewMultiHeader>-->
+    <!--<com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader
+        android:id="@+id/rl_head"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+            <WebView
+                android:id="@+id/web_out"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+    </com.bartoszlipinski.recyclerviewheader2.RecyclerViewHeader>-->
+</RelativeLayout>

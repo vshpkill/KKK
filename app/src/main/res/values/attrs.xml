@@ -44,4 +44,29 @@
             <enum name="sun" value="0" />
         </attr>
     </declare-styleable>
+
+    <declare-styleable name="RecyclerViewMultiHeader">
+        <attr name="videoScale" format="float" />
+        <attr name="viewState">
+            <enum name="video" value="0" />
+            <enum name="view_header" value="1" />
+            <enum name="web" value="2" />
+        </attr>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="PowerfulRecyclerView">
+        <attr name="dividerColor" format="color"/>
+        <attr name="dividerSize" format="dimension"/>
+        <attr name="dividerDrawable" format="reference"/>
+        <attr name="useStaggerLayout" format="boolean"/>
+        <attr name="numColumns" format="integer"/>
+        <attr name="rvOrientation" format="enum">
+            <enum name="HORIZONTAL" value="0"/>
+            <enum name="VERTICAL" value="1"/>
+        </attr>
+        <attr name="dividerMarginLeft" format="dimension"/>
+        <attr name="dividerMarginRight" format="dimension"/>
+    </declare-styleable>
 </resources>

@@ -7,7 +7,9 @@ import android.widget.ListView;
 
 import com.youlehuo.app.BaseActivity;
 import com.youlehuo.app.R;
+import com.youlehuo.app.publicmanager.WebViewAcivity;
 import com.youlehuo.app.publicmanager.ipc.IPCActivity;
+import com.youlehuo.app.publicmanager.newfirst.NewsDetailDetailActivity;
 import com.youlehuo.app.publicmanager.popwindow.PopWindowActivity;
 import com.youlehuo.app.publicmanager.refreshview.RefreshViewActivity;
 import com.youlehuo.app.publicmanager.webviewlist.WebViewListActivity;
@@ -53,7 +55,8 @@ public class PublicActivity extends BaseActivity {
         list.add(initBean("popwindow显示", PopWindowActivity.class));
         list.add(initBean("热修复", IPCActivity.class));
         list.add(initBean("自定义ScrollView", WebViewListActivity.class));
-
+        list.add(initBean("webviewHead", WebViewAcivity.class));
+        list.add(initBean("webviewHead", NewsDetailDetailActivity.class));
         lv_main.setAdapter(adapter);
     }
 
