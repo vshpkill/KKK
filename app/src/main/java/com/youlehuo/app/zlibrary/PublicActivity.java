@@ -55,8 +55,8 @@ public class PublicActivity extends BaseActivity {
         list.add(initBean("popwindow显示", PopWindowActivity.class));
         list.add(initBean("热修复", IPCActivity.class));
         list.add(initBean("自定义ScrollView", WebViewListActivity.class));
-        list.add(initBean("webviewHead", WebViewAcivity.class));
-        list.add(initBean("webviewHead", NewsDetailDetailActivity.class));
+        list.add(initBean("webviewHead作为head实现", WebViewAcivity.class));
+        list.add(initBean("webview头滑动view拼接实现", NewsDetailDetailActivity.class));
         lv_main.setAdapter(adapter);
     }
 

@@ -2,24 +2,36 @@ package com.youlehuo.app.publicmanager.webviewlist;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Scroller;
 
 /**
  * Created by xiaohe on 18-3-1.
  */
 
 public class ScrollGroupView extends ViewGroup {
+
+    private Scroller scroller;
+
     public ScrollGroupView(Context context) {
         super(context);
+        initView(context);
     }
 
     public ScrollGroupView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        initView(context);
     }
 
     public ScrollGroupView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
+        initView(context);
+    }
+
+    private void initView(Context context) {
+        scroller = new Scroller(context);
     }
 
 
@@ -82,6 +94,44 @@ public class ScrollGroupView extends ViewGroup {
             beforeWidth = childView.getMeasuredHeight();
             beforeHeight = childView.getMeasuredHeight() + marginLayoutParams.topMargin + marginLayoutParams.bottomMargin;
             childView.layout(childl + paddingLeft, childt + paddingTop, childr, childb);
+        }
+    }
+
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int startX = 0;
+        int startY = 0;
+        int endX = 0;
+        int endY = 0;
+        switch (event.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                startX = (int) event.getX();
+                startY = (int) event.getY();
+                break;
+            case MotionEvent.ACTION_MOVE:
+                break;
+            case MotionEvent.ACTION_UP:
+                endX = (int) event.getX();
+                endY = (int) event.getY();
+                scroller.startScroll(0,startY,0,endY);
+                invalidate();
+                break;
+        }
+        return true;
+    }
+
+    int oldX,oldY;
+
+    @Override
+    public void computeScroll() {
+        if (scroller.computeScrollOffset()){
+            int x=scroller.getCurrX();
+            int y=scroller.getCurrY();
+            scrollBy(x-oldX, y-oldY);
+            invalidate();
+            oldX = x;
+            oldY = y;
         }
     }
 

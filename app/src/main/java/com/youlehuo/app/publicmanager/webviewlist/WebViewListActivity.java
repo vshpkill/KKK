@@ -15,7 +15,6 @@ public class WebViewListActivity extends BaseActivity {
 
     @Override
     protected void initView() {
-
     }
 
     @Override
