@@ -2,9 +2,12 @@ package com.youlehuo.app.publicmanager.webviewlist;
 
 import android.content.Context;
 import android.util.AttributeSet;
+import android.util.DisplayMetrics;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.Scroller;
 
 /**
@@ -12,9 +15,9 @@ import android.widget.Scroller;
  */
 
 public class ScrollGroupView extends ViewGroup {
-
+    private static final String TAG = "ScrollGroupView";
     private Scroller scroller;
-
+    private int screenHeight;
     public ScrollGroupView(Context context) {
         super(context);
         initView(context);
@@ -31,6 +34,7 @@ public class ScrollGroupView extends ViewGroup {
     }
 
     private void initView(Context context) {
+        screenHeight = getScreenSize(context).heightPixels;
         scroller = new Scroller(context);
     }
 
@@ -97,41 +101,72 @@ public class ScrollGroupView extends ViewGroup {
         }
     }
 
-
+    int lastDownY = 0;
+    private float mScrollStart;
+    private float mScrollEnd;
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int startX = 0;
-        int startY = 0;
+
         int endX = 0;
         int endY = 0;
         switch (event.getAction()) {
             case MotionEvent.ACTION_DOWN:
-                startX = (int) event.getX();
-                startY = (int) event.getY();
+                mScrollStart = getScrollY();
+                lastDownY = (int) event.getY();
                 break;
             case MotionEvent.ACTION_MOVE:
+                float currentY = event.getY();
+                float dy;
+                dy = lastDownY - currentY;
+                if (getScrollY()<0){
+                    dy = 0;
+                }else if (getScrollY()>getHeight()-screenHeight){
+                    dy = 0;
+                }
+                scrollBy(0, (int) dy);
+                lastDownY = (int) event.getY();
+                /*dy = (int) (event.getY() - startY);
+//                if (getScrollY() < 0) {
+//                    dy = 0;
+//                } else if (getScrollY() > getHeight() - screenHeight) {
+//                    dy = 0;
+//                }
+
+
+                if (event.getY()<0){
+                    dy = 0;
+                }else if (event.getY()>getHeight()){
+                    dy = getHeight();
+                }
+                scroller.startScroll(0,0,startY, dy);
+                invalidate();
+//                scrollBy(0, dy);*/
                 break;
             case MotionEvent.ACTION_UP:
-                endX = (int) event.getX();
-                endY = (int) event.getY();
-                scroller.startScroll(0,startY,0,endY);
-                invalidate();
+                mScrollEnd = getScrollY();
+                int dScrollY = (int) (mScrollEnd - mScrollStart);
+                if (mScrollEnd < 0) {// 最顶端：手指向下滑动，回到初始位置
+                    Log.d(TAG, "mScrollEnd < 0" + dScrollY);
+                    scroller.startScroll(0, getScrollY(), 0, -getScrollY());
+                } else if (mScrollEnd > getHeight() - screenHeight) {//已经到最底端，手指向上滑动回到底部位置
+                    Log.d(TAG, "getHeight() - mScreenHeight - (int) mScrollEnd " + (getHeight() - screenHeight - (int) mScrollEnd));
+                    scroller.startScroll(0, getScrollY(), 0, getHeight() - screenHeight - (int) mScrollEnd);
+                }
+                postInvalidate();// 重绘执行computeScroll()
+//                endX = (int) event.getX();
+//                endY = (int) event.getY();
+//                invalidate();
                 break;
         }
         return true;
     }
 
-    int oldX,oldY;
-
     @Override
     public void computeScroll() {
         if (scroller.computeScrollOffset()){
-            int x=scroller.getCurrX();
-            int y=scroller.getCurrY();
-            scrollBy(x-oldX, y-oldY);
-            invalidate();
-            oldX = x;
-            oldY = y;
+            scrollTo(0, scroller.getCurrY());
+            postInvalidate();
         }
     }
 
@@ -141,5 +176,12 @@ public class ScrollGroupView extends ViewGroup {
     @Override
     public LayoutParams generateLayoutParams(AttributeSet attrs) {
         return new MarginLayoutParams(getContext(), attrs);
+    }
+
+    public static DisplayMetrics getScreenSize(Context context) {
+        DisplayMetrics metrics = new DisplayMetrics();
+        WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
+        wm.getDefaultDisplay().getMetrics(metrics);
+        return metrics;
     }
 }
